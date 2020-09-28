@@ -1,0 +1,9 @@
+%p
+  %strong
+    Title:#{@book.title}
+%p
+  %strong
+    Body:#{@book.body}
+= succeed "|" do
+  %span= link_to "Show", book_path(@book.id)
+%span= link_to "Back", books_path

@@ -1,0 +1,13 @@
+%h1 Editing Book
+= form_with model:@book, local:true do |f|
+  .field
+    %p Title
+    = f.text_field :title
+  .field
+    %p Body
+    = f.text_area :body
+  .action
+    = f.submit 'Update Book'
+= succeed "|" do
+  %span= link_to "Show", book_path(@book.id)
+%span= link_to "Back", books_path
